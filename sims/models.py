@@ -3,6 +3,8 @@ from django.forms import CharField
 
 class Simulation(models.Model):
     name = models.CharField(max_length=255)
+    def __str__(self) -> str:
+        return self.name
 
 class User(models.Model):
     name = models.CharField(max_length=255)
