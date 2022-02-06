@@ -3,6 +3,7 @@ from django.forms import CharField
 
 class Simulation(models.Model):
     name = models.CharField(max_length=255)
+    address = models.CharField(max_length=255, default='#')
     def __str__(self) -> str:
         return self.name
 

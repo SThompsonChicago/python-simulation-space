@@ -16,9 +16,12 @@ Including another URLconf
 from django.views.generic import TemplateView
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 import debug_toolbar
 
 urlpatterns = [
+    path('', views.home),
+    path('about/', views.about),
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
     path('sims/', include('sims.urls')),
