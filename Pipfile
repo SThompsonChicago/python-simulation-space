@@ -9,6 +9,8 @@ django-debug-toolbar = "*"
 python-dotenv = "*"
 mysqlclient = "*"
 djangorestframework = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
