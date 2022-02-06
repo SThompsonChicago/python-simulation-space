@@ -23,14 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-SECRET_KEY = str(os.getenv('SECRET_KEY'))
-# SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
 
-ALLOWED_HOSTS = [
-    'singwithsims.herokuapp.com'
-]
 
 
 # Application definition
@@ -86,19 +80,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'simhub.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'simhub',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': str(os.getenv('MYSQL_PASS'))
-    }
-}
 
 
 # Password validation

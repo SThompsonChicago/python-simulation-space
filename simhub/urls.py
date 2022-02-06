@@ -20,8 +20,8 @@ from . import views
 import debug_toolbar
 
 urlpatterns = [
-    path('', views.home),
-    path('about/', views.about),
+    path('', TemplateView.as_view(template_name='simhub/index.html')),
+    path('about/', TemplateView.as_view(template_name='simhub/about.html')),
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
     path('sims/', include('sims.urls')),
