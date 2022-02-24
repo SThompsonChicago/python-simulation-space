@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'playground',
     'debug_toolbar',
-    'sims'
+    'sims',
+    'api.apps.ApiConfig'
 ]
 
 MIDDLEWARE = [

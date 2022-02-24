@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 import debug_toolbar
+from api.models import SimResource
+
+simulation_resource = SimResource()
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='simhub/index.html')),
@@ -25,5 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
     path('sims/', include('sims.urls')),
-    path('__debug__/', include('debug_toolbar.urls'))
+    path('__debug__/', include('debug_toolbar.urls')),
+    path('api/', include(simulation_resource.urls))
 ]

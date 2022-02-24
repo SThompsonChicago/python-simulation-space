@@ -12,6 +12,7 @@ djangorestframework = "*"
 gunicorn = "*"
 whitenoise = "*"
 dj-database-url = "*"
+django-tastypie = "*"
 
 [dev-packages]
 
