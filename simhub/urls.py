@@ -29,5 +29,6 @@ urlpatterns = [
     path('playground/', include('playground.urls')),
     path('sims/', include('sims.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
-    path('api/', include(simulation_resource.urls))
+    path('api/', include(simulation_resource.urls)),
+    path('solver1', views.solver1, name='solver1')
 ]
